@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ProductListFragment">
+
+    <View
+        android:id="@+id/view_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_bg_pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:alpha="0.1"
+        app:layout_constraintRight_toRightOf="@id/recyclerview_magazines"
+        app:layout_constraintTop_toBottomOf="@+id/i_menu" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_bg_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/recyclerview_products"
+        android:alpha="0.3"
+        app:layout_constraintTop_toBottomOf="@+id/i_menu" />
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:alpha="0.2"
+        android:background="@drawable/gradient_bg_pink_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/i_menu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="clickDrawerMenu"
+        android:src="@drawable/ic_menu_burger"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/i_bag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="clickDrawerMenu"
+        android:src="@drawable/ic_shopping_bag"
+        app:layout_constraintTop_toTopOf="@id/i_menu"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/t_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/i_menu"
+        app:layout_constraintTop_toBottomOf="@+id/i_menu"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/traffolight"
+        android:textSize="32sp"
+        android:alpha="0.8"
+        android:textColor="@color/black"
+        android:text="Create your style"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_magazines"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_products"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/recyclerview_magazines"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:alpha="0.9"
+        android:onClick="clickEmptySpace"
+        android:background="@drawable/gradient_bg_pink_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/r_search"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:outlineSpotShadowColor="@color/colorPink"
+        android:background="@drawable/rounded_bg"
+        android:backgroundTint="@color/colorPink">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_loupe"
+            android:padding="15dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_controls"
+        android:alpha="0.8"
+        android:padding="10dp"
+        android:onClick="clickFilter"
+        app:layout_constraintTop_toTopOf="@+id/r_search"
+        app:layout_constraintLeft_toRightOf="@+id/r_search"
+        app:layout_constraintBottom_toBottomOf="@+id/r_search"
+        android:layout_marginLeft="40dp"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_chart_thin"
+        android:alpha="0.8"
+        android:padding="10dp"
+        android:onClick="clickSort"
+        app:layout_constraintTop_toTopOf="@+id/r_search"
+        app:layout_constraintRight_toLeftOf="@+id/r_search"
+        app:layout_constraintBottom_toBottomOf="@+id/r_search"
+        android:layout_marginRight="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
