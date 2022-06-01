@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                android:id="@+id/carousel"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:imageScaleType="centerInside"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/t_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zara"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/t_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ballon cotton blouse"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/t_informationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maglumat"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/t_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100% gowy ysly fransuziski duhy, arzan baha gowy hil"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/t_sizeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ölçeg"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <Spinner
+                android:id="@+id/s_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/size"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/t_priceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baha"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/colorPink"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:id="@+id/t_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TMT 100"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/colorPink"
+        android:src="@drawable/ic_baseline_phone_enabled_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

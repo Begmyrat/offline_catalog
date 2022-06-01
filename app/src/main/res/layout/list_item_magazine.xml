@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.fabrika.tagtabazar.utils.VerticalTextView
+        android:id="@+id/t_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:text="Aýakgap"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
+        android:alpha="0.8"
+        android:rotation="180"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="3dp"
+        android:layout_height="30dp"
+        android:background="@color/colorPink"
+        android:layout_toRightOf="@+id/t_title"
+        android:layout_alignBottom="@+id/t_title"
+        android:layout_marginLeft="5dp"
+        />
+
+
+</RelativeLayout>
